@@ -1,0 +1,44 @@
+{
+    "profile": {
+        "name": "Smithbondz",
+        "title": "Fullstack Developer",
+        "sub_title": "Website & Gaming",
+        "motto": "Membangun masa depan digital dengan kode yang elegan dan performa yang presisi.",
+        "about_me": "Halo! Saya adalah seorang developer yang berfokus pada pengembangan web modern dan ekosistem gaming.",
+        "stats": [
+            { "label": "Total Projects", "value": "12+" },
+            { "label": "Certificates", "value": "5+" },
+            { "label": "Years of Exp", "value": "1+" }
+        ]
+    },
+    "projects": [
+        {
+            "title": "E-Attendance System",
+            "desc": "Sistem absensi modern berbasis web dengan fitur real-time.",
+            "link": "https://github.com/AjiSmith"
+        },
+        {
+            "title": "Gaming Community Portal",
+            "desc": "Platform interaktif untuk komunitas gamer di seluruh dunia.",
+            "link": "#"
+        },
+        {
+            "title": "Elegant Portfolio",
+            "desc": "Website portfolio dengan desain futuristik dan mobile first.",
+            "link": "#"
+        }
+    ],
+    "tech_stack": [
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "TailwindCSS", "icon": "tailwindcss" },
+        { "name": "ReactJS", "icon": "react" },
+        { "name": "Vite", "icon": "vitejs" },
+        { "name": "NodeJS", "icon": "nodejs" },
+        { "name": "Bootstrap", "icon": "bootstrap" },
+        { "name": "MongoDB", "icon": "mongodb" },
+        { "name": "Vercel", "icon": "vercel" },
+        { "name": "MaterialUI", "icon": "materialui" }
+    ]
+}
