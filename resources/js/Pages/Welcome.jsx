@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
 import { Head } from '@inertiajs/react';
 
-import portfolioData from '../data.json'; 
+import portfolioData from '../data.json';
 
-export default function Welcome() { // Hapus { data } dari parameter
+export default function Welcome() {
     const [activeTab, setActiveTab] = useState('projects');
-    const data = portfolioData; // Gunakan data dari JSON
+    const data = portfolioData;
 
     return (
         <div className="bg-[#0f0f0f] text-white min-h-screen font-sans overflow-x-hidden">
             <Head title="Portfolio" />
 
-            {/* --- SECTION 1: WELCOMING SYSTEM --- */}
             <section className="h-screen flex flex-col justify-center items-center text-center px-4 relative animate-gradient">
                 <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
-
                 <div className="z-10 flex flex-col items-center">
-                    {/* Icons */}
                     <div className="flex gap-8 mb-8" data-aos="fade-down">
-                        {/* SVG Icons tetap sama seperti sebelumnya */}
                         <span className="text-thistle/60 hover:text-thistle transition-all duration-500 transform hover:scale-125 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                         </span>
@@ -46,29 +42,19 @@ export default function Welcome() { // Hapus { data } dari parameter
                     </div>
                 </div>
 
-                {/* GRADIENT SPACER 1: Dari Welcoming ke Main Page */}
                 <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
             </section>
 
-            {/* --- SECTION 2: MAIN PAGE CONTENT --- */}
             <section className="relative container mx-auto px-6 py-32 flex flex-col md:flex-row items-center gap-12 overflow-hidden">
                 <div className="md:w-1/2" data-aos="fade-up">
                     <h2 className="text-thistle text-5xl font-black mb-2 tracking-tighter">{data.profile.title}</h2>
                     <h3 className="text-xl text-gray-400 mb-6 font-medium">{data.profile.sub_title}</h3>
-                    <p className="text-gray-400 text-lg mb-8 max-w-md italic border-l-2 border-thistle/30 pl-4">
-                        "{data.profile.motto}"
-                    </p>
-
+                    <p className="text-gray-400 text-lg mb-8 max-w-md italic border-l-2 border-thistle/30 pl-4">"{data.profile.motto}"</p>
                     <div className="flex gap-4">
-                        {/* Social Buttons (Sesuai kode sebelumnya) */}
                         <a href="https://instagram.com/az.saputra_" target="_blank" className="group relative flex items-center gap-3 bg-white/5 border border-thistle/20 px-6 py-3 rounded-xl font-bold overflow-hidden transition-all duration-300 hover:border-thistle/50">
-                            <div className="absolute inset-0 bg-gradient-to-r from-indigo_custom to-thistle opacity-0 group-hover:opacity-10 transition-opacity"></div>
-                            <span className="text-sm tracking-wider">Instagram</span>
-                        </a>
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo_custom to-thistle opacity-0 group-hover:opacity-10 transition-opacity"></div><span className="text-sm tracking-wider">Instagram</span></a>
                         <a href="https://github.com/AjiSmith" target="_blank" className="group relative flex items-center gap-3 bg-white/5 border border-thistle/20 px-6 py-3 rounded-xl font-bold overflow-hidden transition-all duration-300 hover:border-thistle/50">
-                            <div className="absolute inset-0 bg-gradient-to-r from-thistle to-indigo_custom opacity-0 group-hover:opacity-10 transition-opacity"></div>
-                            <span className="text-sm tracking-wider">Github</span>
-                        </a>
+                            <div className="absolute inset-0 bg-gradient-to-r from-thistle to-indigo_custom opacity-0 group-hover:opacity-10 transition-opacity"></div><span className="text-sm tracking-wider">Github</span></a>
                     </div>
                 </div>
 
@@ -81,20 +67,17 @@ export default function Welcome() { // Hapus { data } dari parameter
                     </div>
                     <p className="mt-8 text-2xl font-black tracking-[0.2em] uppercase text-thistle/50">The Developer</p>
                 </div>
-
-                {/* GRADIENT SPACER 2: Dari Main Page ke About Me */}
                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#151515] to-transparent"></div>
             </section>
 
-            {/* --- SECTION 3: ABOUT ME --- */}
             <section className="bg-[#151515] py-32 relative">
                 <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16" data-aos="fade-up">
                     <div className="md:w-1/2">
                         <h2 className="text-6xl font-black mb-4 tracking-tighter">About Me</h2>
                         <p className="text-thistle italic mb-8 opacity-60">"{data.profile.motto}"</p>
-                        <p className="text-gray-400 leading-relaxed mb-10 text-lg">
-                            {data.profile.about_me}
-                        </p>
+                        <p className="from-thistle via-indigo-400 to-indigo_custom leading-relaxed mb-10 text-6x1">Hi!, I'm</p>
+                        <p className="from-thistle via-indigo-700 to-indigo_custom leading-relaxed mb-10 text-4x1">Azimas Perwata Saputra</p>
+                        <p className="text-gray-400 leading-relaxed mb-10 text-lg">{data.profile.about_me}</p>
 
                         <div className="grid grid-cols-3 gap-4">
                             {data.profile.stats.map((stat, i) => (
@@ -114,12 +97,9 @@ export default function Welcome() { // Hapus { data } dari parameter
                         <div className="absolute -inset-2 bg-gradient-to-r from-thistle to-indigo_custom blur-xl opacity-10 group-hover:opacity-25 -z-10 transition-opacity"></div>
                     </div>
                 </div>
-
-                {/* GRADIENT SPACER 3: Dari About Me ke Portfolio */}
                 <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0f0f0f] to-transparent"></div>
             </section>
 
-            {/* --- SECTION 4: PORTFOLIO SHOWCASE --- */}
             <section className="container mx-auto px-6 py-32" data-aos="fade-up">
                 <div className="text-center mb-20">
                     <span className="text-transparent text-5xl font-black bg-clip-text bg-gradient-to-r from-thistle via-indigo-400 to-indigo_custom">
@@ -128,7 +108,6 @@ export default function Welcome() { // Hapus { data } dari parameter
                     <div className="h-1 w-20 bg-gradient-to-r from-thistle to-indigo_custom mx-auto rounded-full"></div>
                 </div>
 
-                {/* Navigation Tabs - Underline Style */}
                 <div className="flex justify-center gap-12 mb-16 border-b border-white/5">
                     {['projects', 'certificates', 'tech stack'].map((tab) => (
                         <button
@@ -138,17 +117,13 @@ export default function Welcome() { // Hapus { data } dari parameter
                                 }`}
                         >
                             {tab}
-                            {/* Underline Hoover/Active Effect */}
                             <span className={`absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-thistle to-indigo_custom transition-transform duration-500 origin-left ${activeTab === tab ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                                 }`}></span>
                         </button>
                     ))}
                 </div>
 
-                {/* Content Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-                    {/* 1. Projects Tab */}
                     {activeTab === 'projects' && data.projects.map((p, i) => (
                         <div key={i} className="bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] hover:bg-white/[0.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay={i * 100}>
                             <div className="h-48 bg-gradient-to-br from-indigo_custom/20 to-thistle/10 rounded-2xl mb-6 relative overflow-hidden">
@@ -160,11 +135,9 @@ export default function Welcome() { // Hapus { data } dari parameter
                         </div>
                     ))}
 
-                    {/* 2. Certificates Tab (Template Image) */}
                     {activeTab === 'certificates' && [1, 2, 3].map((item) => (
                         <div key={item} className="group cursor-pointer" data-aos="zoom-in">
                             <div className="relative aspect-[4/3] bg-neutral-900 rounded-xl overflow-hidden border border-white/10 group-hover:border-thistle/50 transition-all shadow-2xl">
-                                {/* Ganti 'src' dengan path gambar sertifikat Anda nantinya */}
                                 <img
                                     src={`https://placehold.co/600x400/1a1a1a/D8BFD8?text=Certificate+${item}`}
                                     alt="Certificate"
@@ -177,7 +150,6 @@ export default function Welcome() { // Hapus { data } dari parameter
                         </div>
                     ))}
 
-                    {/* 3. Tech Stack Tab (Real Icons) */}
                     {activeTab === 'tech stack' && (
                         <div className="col-span-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                             {[
@@ -208,7 +180,6 @@ export default function Welcome() { // Hapus { data } dari parameter
                 </div>
             </section>
 
-            {/* Footer */}
             <footer className="py-16 border-t border-white/5 text-center">
                 <div className="text-thistle font-black tracking-widest mb-4 opacity-50 uppercase text-[10px]">Smithbondz Portfolio</div>
                 <p className="text-gray-600 text-xs">© {new Date().getFullYear()} — All rights reserved</p>

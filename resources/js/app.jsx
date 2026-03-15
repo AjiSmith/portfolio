@@ -7,7 +7,6 @@ import { createRoot } from 'react-dom/client';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Inisialisasi AOS
 AOS.init({
     duration: 1000,
     once: true,
@@ -16,7 +15,7 @@ AOS.init({
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => `${title} - Smithbondz`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.jsx`,
@@ -27,6 +26,6 @@ createInertiaApp({
         root.render(<App {...props} />);
     },
     progress: {
-        color: '#D8BFD8', // Warna Thistle untuk loading bar
+        color: '#D8BFD8',
     },
 });

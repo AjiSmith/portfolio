@@ -2,13 +2,13 @@
     "profile": {
         "name": "Smithbondz",
         "title": "Fullstack Developer",
-        "sub_title": "Website & Gaming",
-        "motto": "Membangun masa depan digital dengan kode yang elegan dan performa yang presisi.",
-        "about_me": "Halo! Saya adalah seorang developer yang berfokus pada pengembangan web modern dan ekosistem gaming.",
+        "sub_title": "Website & Gaming Developer",
+        "motto": "Membangun website digital dengan memperhatikan estetika dan performa",
+        "about_me": "Hi!",
         "stats": [
             { "label": "Total Projects", "value": "12+" },
-            { "label": "Certificates", "value": "5+" },
-            { "label": "Years of Exp", "value": "1+" }
+            { "label": "Certificates", "value": "3+" },
+            { "label": "Years of Experience", "value": "3+" }
         ]
     },
     "projects": [
