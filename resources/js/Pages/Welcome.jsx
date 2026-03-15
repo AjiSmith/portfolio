@@ -74,9 +74,11 @@ export default function Welcome() {
                 <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16" data-aos="fade-up">
                     <div className="md:w-1/2">
                         <h2 className="text-6xl font-black mb-2 tracking-tighter">About Me</h2>
-                        <p className="text-thistle italic mb-4 opacity-60">"{data.profile.motto}"</p>
-                        <p className="from-thistle via-indigo-400 to-indigo_custom leading-relaxed mb-1 text-6x1">Hi!, I'm</p>
-                        <p className="from-thistle via-indigo-700 to-indigo_custom leading-relaxed mb-2 text-4x1">Azimas Perwata Saputra</p>
+                        <p className="text-thistle italic mb-6 opacity-60">"{data.profile.motto}"</p>
+                        <p className="text-5xl md:text-7xl font-extrabold leading-none mb-2 bg-gradient-to-r from-yellow-400 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                            Hi!, I'm </p>
+                        <p className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-white">
+                            Azimas Perwata Saputra</p>
                         <p className="text-gray-400 leading-relaxed mb-10 text-lg">{data.profile.about_me}</p>
 
                         <div className="grid grid-cols-3 gap-4">
